@@ -3,9 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon"
-        href="https://github.com/mazdanwllsyh/fayzaandinibirthday/blob/main/assets/happy-birthday.png?raw=true"
-        type="image/x-icon" />
+    <link
+      rel="shortcut icon"
+      href="https://github.com/mazdanwllsyh/fayzaandinibirthday/blob/main/assets/happy-birthday.png?raw=true"
+      type="image/x-icon"
+    />
     <title>13 Juni 2024 - Fayza Andini's Birthday</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
@@ -20,150 +22,206 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div id="header" class="text-light py-2">
-        <div class="container d-flex justify-content-between align-items-center">
-          <h5 class="mb-0 text-dark">Mazda ❤️ Fayza</h5>
-          <div id="clock" class="text-dark"></div>
-        </div>
+      <div class="container d-flex justify-content-between align-items-center">
+        <h5 class="mb-0 text-dark">Mazda ❤️ Fayza</h5>
+        <div id="clock" class="text-dark"></div>
       </div>
+    </div>
 
     <div id="form" class="d-flex align-items-center justify-content-center">
-    <div class="container mt-5">
-      <div id="card" class="card card-center p-4">
-        <form id="birthdayForm">
-          <h1 class="text-center mb-3 highlight-text fw-bold">This is your day</h1>
-          <div class="mb-3">
-            <label for="name" class="form-label fw-bold">Nama Kamu :</label>
-            <input
-              type="text"
-              class="form-control"
-              id="name"
-              placeholder="Misal 'Ichaa' atau 'Ayangnya Mazda' "
-              required
+      <div class="container mt-5">
+        <div id="card" class="card card-center p-4">
+          <form id="birthdayForm">
+            <h1 class="text-center mb-3 highlight-text fw-bold">This is your day</h1>
+            <div class="mb-3">
+              <label for="name" class="form-label fw-bold">Nama Kamu :</label>
+              <input
+                type="text"
+                class="form-control"
+                id="name"
+                placeholder="Misal 'Ichaa' atau 'Ayangnya Mazda' "
+                required
+              />
+            </div>
+            <div class="mb-3 position-relative">
+              <label for="birthday" class="form-label fw-bold">Tanggal Ultahmu Beb :</label>
+              <input type="date" class="form-control" id="birthday" required />
+              <div class="tooltip-label mt-3 text-dark fw-bold">*jawab yang bener beb</div>
+            </div>
+            <div class="d-flex justify-content-center">
+              <button type="button" class="btn btn-secondary w-50 mt-5 btn-avoid" id="submitBtn">Kirim</button>
+            </div>
+          </form>
+        </div>
+        <div id="greetingCard" class="card card-center mt-5 position-relative" style="display: none">
+          <div class="image-wrapper position-absolute">
+            <!-- Tambahkan div pembungkus untuk gambar -->
+            <img
+              src="https://github.com/mazdanwllsyh/mypersonal/blob/main/ME/ruins_blur_circle.png?raw=true"
+              alt="Profile Picture"
+              class="profile-pic"
             />
           </div>
-          <div class="mb-3 position-relative">
-            <label for="birthday" class="form-label fw-bold"
-              >Tanggal Ultahmu Beb :</label
-            >
-            <input
-              type="date"
-              class="form-control"
-              id="birthday"
-              required
+          <div class="card-body text-center">
+            <h5 class="card-title mt-5 mb-2 fw-bold">Selamat Ulang Tahun Buat Ayangku tercintahh!</h5>
+            <p class="card-text">
+              Selamat Ulang Tahun ke-22 ayangkuhhh, semoga panjang umur, dilancarkan rezekinya, makin pinter, makin
+              semangat buat ngejalanin hari-harinya, makin cantik juga tentunya.❤️🥰
+              <p class="card-text">
+                Maaf cuman bisa ngasih kaya gini doang, untuk hadiahnya nyusul dulu ya sayang🥺, maaf kalo saat ini masih
+                belum bisa ngasih apa apa Insyaallah besok aku usahain kamu buat nurutin apa kemauanmu dan nurutin kamu
+                buat capai wishlistmu.
+              </p>
+              <p class="card-text">
+                Pokoknya semangat kuliahnya, lulus tepat waktu terus bahagiain ortu. Makasih udah bertahan sampe sini
+                sama aku ya sayang, aku cuman bisa gini doang buat kamu. Kamu semangat terus ya sayangkuhhh.<br />
+              </p>
+              <p class="card-text">MWAHHHH😚😚</p>
+            </p>
+            <p class="card-text-custom fw-bold float-end">- Mazda Nawallsyah</p>
+          </div>
+        </div>
+        <div class="d-flex justify-content-center">
+          <button class="btn btn-danger w-25 m-3" id="backToForm" style="display: none">
+            <i class="fas fa-arrow-left me-2"></i>Kembali
+          </button>
+          <button class="btn btn-primary w-25 m-3" id="showGallery" style="display: none">
+            <i class="fas fa-images me-2"></i>Lihat Galeri
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div id="gallery" class="gallery container mt-5">
+      <h2 class="text-center mb-5 fw-bold">Gallery</h2>
+      <div class="container row justify-content-center">
+        <div class="col-md-4 col-sm-6 mb-4">
+          <div class="card">
+            <img
+              src="https://github.com/mazdanwllsyh/fayzaandinibirthday/blob/main/assets/iklan%20susu.jpg?raw=true"
+              class="card-img-top"
+              alt="Image 1"
             />
-            <div class="tooltip-label mt-3 text-dark fw-bold">*jawab yang bener beb</div>
+            <div class="card-body">
+              <h5 class="card-title text-center">mik cucu duyuu ciniii</h5>
+            </div>
           </div>
-          <div class="d-flex justify-content-center">
-            <button
-              type="button"
-              class="btn btn-secondary w-50 mt-5 btn-avoid"
-              id="submitBtn"
-            >
-              Kirim
-            </button>
+        </div>
+        <div class="col-md-4 col-sm-6 mb-4">
+          <div class="card">
+            <img
+              src="https://github.com/mazdanwllsyh/fayzaandinibirthday/blob/main/assets/baaa%20ciapa%20iniii.jpg?raw=true"
+              class="card-img-top"
+              alt="Image 2"
+            />
+            <div class="card-body">
+              <h5 class="card-title text-center">ehh ciapa niii</h5>
+            </div>
           </div>
-        </form>
-      </div>
-      <div
-        id="greetingCard"
-        class="card card-center mt-5 position-relative"
-        style="display: none"
-      >
-      <div class="image-wrapper position-absolute"> <!-- Tambahkan div pembungkus untuk gambar -->
-        <img
-          src="https://github.com/mazdanwllsyh/mypersonal/blob/main/ME/ruins_blur_circle.png?raw=true"
-          alt="Profile Picture"
-          class="profile-pic"
-        />
-      </div>
-        <div class="card-body text-center">
-          <h5 class="card-title mt-5 mb-2 fw-bold">
-            Selamat Ulang Tahun Buat Ayangku tercintahh!
-          </h5>
-          <p class="card-text">
-            Selamat Ulang Tahun ke-22 ayangkuhhh, semoga panjang umur,
-            dilancarkan rezekinya, makin pinter, makin semangat buat ngejalanin
-            hari-harinya, makin cantik juga tentunya.❤️🥰
-            <p class="card-text">Maaf cuman bisa ngasih kaya gini doang, untuk hadiahnya nyusul dulu
-                ya sayang🥺, maaf kalo saat ini masih belum bisa ngasih apa apa
-                Insyaallah besok aku usahain kamu buat nurutin apa kemauanmu dan
-                nurutin kamu buat capai wishlistmu.</p>
-            <p class="card-text">Pokoknya semangat kuliahnya, lulus tepat waktu terus bahagiain ortu.
-                Makasih udah bertahan sampe sini sama aku ya sayang, aku cuman bisa
-                gini doang buat kamu. Kamu semangat terus ya sayangkuhhh.<br />
-                </p>
-                <p class="card-text">MWAHHHH😚😚</p>
-          </p>
-          <p class="card-text-custom fw-bold float-end">- Mazda Nawallsyah</p>
+        </div>
+        <div class="col-md-4 col-sm-6 mb-4">
+          <div class="card">
+            <img
+              src="https://github.com/mazdanwllsyh/fayzaandinibirthday/blob/main/assets/berangkat%20dulu%20sayangg.jpg?raw=true"
+              class="card-img-top"
+              alt="Image 3"
+            />
+            <div class="card-body">
+              <h5 class="card-title text-center">berangkat ngajar dulu sayangg</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6 mb-4">
+          <div class="card">
+            <img
+              src="https://github.com/mazdanwllsyh/fayzaandinibirthday/blob/main/assets/new%20celosia%20crop.jpg?raw=true"
+              class="card-img-top"
+              alt="Image 4"
+            />
+            <div class="card-body">
+              <h5 class="card-title text-center">duduk vincent</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6 mb-4">
+          <div class="card">
+            <img
+              src="https://github.com/mazdanwllsyh/fayzaandinibirthday/blob/main/assets/alfa%20gp%20crop%201.jpg?raw=true"
+              class="card-img-top"
+              alt="Image 5"
+            />
+            <div class="card-body">
+              <h5 class="card-title text-center">neduh dulu sama ayang ges</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6 mb-4">
+          <div class="card">
+            <img
+              src="https://github.com/mazdanwllsyh/fayzaandinibirthday/blob/main/assets/Gambar%20WhatsApp%202024-05-11%20pukul%2022.14.08_4a6c1177(2).jpg?raw=true"
+              class="card-img-top"
+              alt="Image 6"
+            />
+            <div class="card-body">
+              <h5 class="card-title text-center">apa liat liat!</h5>
+            </div>
+          </div>
         </div>
       </div>
       <div class="d-flex justify-content-center">
-        <button class=" btn btn-danger w-50 m-5" id="backToForm" style="display: none;">
-            <i class="fas fa-arrow-left me-2"></i>Kembali ke pelukanku
+        <button class="btn btn-warning w-100 mt-5 mb-3" id="backToFormFromGallery">
+          <i class="fas fa-arrow-left me-2"></i>Kembali ke Form
         </button>
-    </div>
-    </div>
-</div>
+      </div>
+    </div>    
 
     <!-- Footer -->
     <footer id="footer-bg-img" class="bg-dark text-light py-4">
-        <div class="container">
-          <div class="row justify-content-center align-items-center mb-3">
-            <div class="col-12 text-center mb-2">
-              <p class="mb-0 text-light">Mazda Nawallsyah ❤️ Fayza Andini Zahra</p>
-            </div>
-            <div class="col-auto">
-              <a
-                href="https://www.instagram.com/mazda.nwllsyah_/"
-                target="_blank"
-                class="text-decoration-none text-light"
-              >
-                <i class="fab fa-instagram fa-1x"></i>
-              </a>
-            </div>
-            <div class="col-auto">
-              <a
-                href="https://wa.me/6287731930024/"
-                target="_blank"
-                class="text-decoration-none text-light"
-              >
-                <i class="fab fa-whatsapp fa-1x"></i>
-              </a>
-            </div>
-            <div class="col-auto">
-              <a
-                href="https://t.me/mazda2601/"
-                target="_blank"
-                class="text-decoration-none text-light"
-              >
-                <i class="fab fa-telegram fa-1x"></i>
-              </a>
-            </div>
-            <div class="col-auto">
-                <a
-                  href="https://www.github.com/mazdanwllsyh/"
-                  target="_blank"
-                  class="text-decoration-none text-light"
-                >
-                  <i class="fab fa-github fa-1x"></i>
-                </a>
-              </div>
+      <div class="container">
+        <div class="row justify-content-center align-items-center mb-3">
+          <div class="col-12 text-center mb-2">
+            <p class="mb-0 text-light">Mazda Nawallsyah ❤️ Fayza Andini Zahra</p>
           </div>
-          <hr class="my-2" />
-          <!-- Pemisah (hr) di bawah ikon sosial media -->
-          <div class="row justify-content-center align-items-center">
-            <div class="col-auto">
-              <p class="mb-0 text-center text-light text-sm-center">
-                &copy; 2024 Mazda Nawallsyah. All Rights Reserved.
-              </p>
-            </div>
+          <div class="col-auto">
+            <a
+              href="https://www.instagram.com/mazda.nwllsyah_/"
+              target="_blank"
+              class="text-decoration-none text-light"
+            >
+              <i class="fab fa-instagram fa-1x"></i>
+            </a>
+          </div>
+          <div class="col-auto">
+            <a href="https://wa.me/6287731930024/" target="_blank" class="text-decoration-none text-light">
+              <i class="fab fa-whatsapp fa-1x"></i>
+            </a>
+          </div>
+          <div class="col-auto">
+            <a href="https://t.me/mazda2601/" target="_blank" class="text-decoration-none text-light">
+              <i class="fab fa-telegram fa-1x"></i>
+            </a>
+          </div>
+          <div class="col-auto">
+            <a href="https://www.github.com/mazdanwllsyh/" target="_blank" class="text-decoration-none text-light">
+              <i class="fab fa-github fa-1x"></i>
+            </a>
           </div>
         </div>
-      </footer>
+        <hr class="my-2" />
+        <!-- Pemisah (hr) di bawah ikon sosial media -->
+        <div class="row justify-content-center align-items-center">
+          <div class="col-auto">
+            <p class="mb-0 text-center text-light text-sm-center">
+              &copy; 2024 Mazda Nawallsyah. All Rights Reserved.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
 
     <!-- Bootstrap dan JavaScript -->
     <script
@@ -174,103 +232,113 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
       $(document).ready(function () {
-        var backgrounds = [
-          "https://github.com/mazdanwllsyh/fayzaandinibirthday/blob/main/assets/happy-birthday%20(1).png?raw=true",
-          "https://github.com/mazdanwllsyh/fayzaandinibirthday/blob/main/assets/new%20celosia%203%20cropped%20.jpg?raw=true",
-          "https://github.com/mazdanwllsyh/fayzaandinibirthday/blob/main/assets/new%20celosia%202%20cropped%20.jpg?raw=true",
-          "https://github.com/mazdanwllsyh/fayzaandinibirthday/blob/main/assets/new%20celosia%204%20cropped%20.jpg?raw=true",
-          "https://github.com/mazdanwllsyh/fayzaandinibirthday/blob/main/assets/new%20celosia%20crop.jpg?raw=true",
-          "https://github.com/mazdanwllsyh/fayzaandinibirthday/blob/main/assets/alfa%20gp%20crop%201.jpg?raw=true"
-          // Tambahkan link background image lainnya di sini
-        ];
-
-        var currentBackgroundIndex = 0;
-
-        function changeBackground() {
-          $('body').css('background-image', 'url("' + backgrounds[currentBackgroundIndex] + '")');
-          currentBackgroundIndex = (currentBackgroundIndex + 1) % backgrounds.length;
-        }
-
-        setInterval(changeBackground, 2200);
-
         var validNames = [
-            "fayza",
-            "fayza andini",
-            "fayza andini zahra",
-            "icha",
-            "ichaa",
-            "ayangnya mazda",
-            "cantiknya mazda",
-        ].map(name => name.toLowerCase()); // Konversi semua nama valid menjadi huruf kecil
+          "fayza",
+          "fayza andini",
+          "fayza andini zahra",
+          "icha",
+          "ichaa",
+          "ayangnya mazda",
+          "cantiknya mazda",
+        ].map((name) => name.toLowerCase()); // Konversi semua nama valid menjadi huruf kecil
 
-        var validDates = [
-            "2002-06-13",
-            "2024-06-13",
-        ];
+        var validDates = ["2002-06-13", "2024-06-13"];
 
         $("#submitBtn").on("mouseenter", function () {
-            var name = $("#name").val().trim().toLowerCase(); // Konversi input nama menjadi huruf kecil
-            var birthday = $("#birthday").val().trim(); // Tanpa perlu konversi, karena input type=date sudah sesuai format
+          var name = $("#name").val().trim().toLowerCase(); // Konversi input nama menjadi huruf kecil
+          var birthday = $("#birthday").val().trim(); // Tanpa perlu konversi, karena input type=date sudah sesuai format
 
-            var direction = Math.random() < 0.5 ? -1 : 1; // Randomly set direction to left or right
+          var direction = Math.random() < 0.5 ? -1 : 1; // Randomly set direction to left or right
 
-            if (!validNames.includes(name) || !validDates.includes(birthday)) {
-                $(this).css("--direction", direction);
-                $(this).addClass("avoiding");
-            }
+          if (!validNames.includes(name) || !validDates.includes(birthday)) {
+            $(this).css("--direction", direction);
+            $(this).addClass("avoiding");
+          }
         });
 
         $("#submitBtn").on("mouseleave", function () {
-            $(this).removeClass("avoiding");
+          $(this).removeClass("avoiding");
         });
 
         $("#submitBtn").on("click", function () {
-        var name = $("#name").val().trim().toLowerCase(); // Konversi input nama menjadi huruf kecil
-        var birthday = $("#birthday").val().trim(); // Tanpa perlu konversi, karena input type=date sudah sesuai format
+          var name = $("#name").val().trim().toLowerCase(); // Konversi input nama menjadi huruf kecil
+          var birthday = $("#birthday").val().trim(); // Tanpa perlu konversi, karena input type=date sudah sesuai format
 
-        console.log("Name: " + name);
-        console.log("Birthday: " + birthday);
+          console.log("Name: " + name);
+          console.log("Birthday: " + birthday);
 
-        if (validNames.includes(name) && validDates.includes(birthday)) {
-            $("#submitBtn").text("Teleport"); // Ubah teks tombol menjadi "Tele"
+          if (validNames.includes(name) && validDates.includes(birthday)) {
+            $("#submitBtn").text("Teleport"); // Ubah teks tombol menjadi "Teleport"
             $("#birthdayForm").hide();
             $("#card").hide();
             $("#greetingCard").show();
-            $("#backToForm").show(); // Tampilkan tombol "Kembali ke Form"
-        } else {
-            alert("Jawab yang bener dong sayanggku 😚❤️");
+            $("#backToForm").show(); // Tampilkan tombol "Kembali ke pelukanku"
+            $("#showGallery").show(); // Tampilkan tombol "Lihat Galeri"
+          } else {
+            alert("Eits itu namanya kesalahan sayangku 😚❤️");
             $("#submitBtn").text("Coba Lagi"); // Ubah teks tombol menjadi "Coba Lagi"
             $("#birthdayForm")[0].reset();
-        }
-    });
+          }
+        });
 
         $("#backToForm").on("click", function () {
-            location.reload(); // Refresh halaman untuk kembali ke form
+          location.reload(); // Refresh halaman untuk kembali ke form
+        });
+
+        $("#showGallery").on("click", function () {
+        if ($("#gallery").is(":visible")) {
+        $("#gallery").hide();
+        $(this).text("Lihat Galeri");
+          } else {
+        $("#form").hide();
+        $("#gallery").show();
+        $(this).text("Tutup Galeri");
+        }
+      });
+
+        $("#backToFormFromGallery").on("click", function () {
+          location.reload(); // Refresh halaman untuk kembali ke form
         });
 
         $(".highlight-text").hover(
-            function () {
-                $(this).text("Fayza Andini's Day");
-            },
-            function () {
-                $(this).text("This is your day");
-            }
+          function () {
+            $(this).text("Fayza Andini's Day");
+          },
+          function () {
+            $(this).text("This is your day");
+          }
         );
 
         // Fungsi untuk menampilkan waktu saat ini pada header
         function updateTime() {
-            var now = new Date();
-            var hours = now.getHours().toString().padStart(2, '0');
-            var minutes = now.getMinutes().toString().padStart(2, '0');
-            var seconds = now.getSeconds().toString().padStart(2, '0');
-            var timeString = hours + ":" + minutes + ":" + seconds;
-            $("#clock").text(timeString);
+          var now = new Date();
+          var hours = now.getHours().toString().padStart(2, "0");
+          var minutes = now.getMinutes().toString().padStart(2, "0");
+          var seconds = now.getSeconds().toString().padStart(2, "0");
+          var timeString = hours + ":" + minutes + ":" + seconds;
+          $("#clock").text(timeString);
         }
 
         updateTime(); // Pertama kali, tampilkan waktu saat ini
-        setInterval(updateTime, 1000); // Setiap 1 detik, perbarui waktu
-      });
+        setInterval(updateTime, 750); // Setiap 1 detik, perbarui waktu
 
+        // Fungsi untuk mengganti background setiap detik
+        var backgrounds = [
+          "url('https://source.unsplash.com/random/1920x1080?nature,water')",
+          "url('https://source.unsplash.com/random/1920x1080?nature,forest')",
+          "url('https://source.unsplash.com/random/1920x1080?nature,mountain')",
+          "url('https://source.unsplash.com/random/1920x1080?nature,beach')",
+          "url('https://source.unsplash.com/random/1920x1080?nature,desert')",
+        ];
+
+        function changeBackground() {
+          var index = Math.floor(Math.random() * backgrounds.length);
+          $("body").css("background-image", backgrounds[index]);
+        }
+
+        changeBackground(); // Ganti background pertama kali
+        setInterval(changeBackground, 2200); // Setiap 2 detik, ganti background
+      });
     </script>
   </body>
 </html>
