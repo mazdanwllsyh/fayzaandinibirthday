@@ -36,7 +36,9 @@
       <div class="container mt-5">
         <div id="card" class="card card-center p-4">
           <form id="birthdayForm">
-            <h1 class="text-center mb-3 highlight-text fw-bold">This is your day</h1>
+            <h1 class="text-center mb-3 highlight-text fw-bold">
+              This is your day
+            </h1>
             <div class="mb-3">
               <label for="name" class="form-label fw-bold">Nama Kamu :</label>
               <input
@@ -47,17 +49,55 @@
                 required
               />
             </div>
+            <div class="mb-3">
+              <label for="birthday" class="form-label fw-bold"
+                >Tanggal Ultahmu Beb :</label
+              >
+              <input
+                type="date"
+                class="form-control"
+                id="birthday"
+                placeholder="13 Juni 2002/Tahun Sekarang"
+                required
+              />
+            </div>
             <div class="mb-3 position-relative">
-              <label for="birthday" class="form-label fw-bold">Tanggal Ultahmu Beb :</label>
-              <input type="date" class="form-control" id="birthday" required />
-              <div class="tooltip-label mt-3 text-dark fw-bold">*jawab yang bener beb</div>
+              <label for="sayangmazdaga" class="form-label fw-bold"
+                >Apakah Icha Sayang Mazda?</label
+              >
+              <select
+                name="sayang"
+                id="sayang"
+                class="form-select text-center"
+                required
+              >
+                <option value="" disabled selected>- - Apa Hayoo - -</option>
+                <option value="enggak">Enggak</option>
+                <option value="b aja">B aja</option>
+                <option value="sayang">Sayang laa</option>
+              </select>
+              <div class="tooltip-label text-dark fw-bold">
+                *jawab yang bener beb
+              </div>
             </div>
             <div class="d-flex justify-content-center">
-              <button type="button" class="btn btn-secondary w-50 mt-5 btn-avoid" id="submitBtn">Kirim</button>
+              <button
+                type="button"
+                class="btn btn-secondary w-50 mt-5 btn-avoid"
+                id="submitBtn"
+              >
+                Kirim
+              </button>
             </div>
           </form>
         </div>
-        <div id="greetingCard" class="card card-center mt-5 position-relative" style="display: none">
+
+        <!-- Ucapan Buat Icha -->
+        <div
+          id="greetingCard"
+          class="card card-center mt-5 position-relative"
+          style="display: none; min-height: max-content"
+        >
           <div class="image-wrapper position-absolute">
             <!-- Tambahkan div pembungkus untuk gambar -->
             <img
@@ -67,38 +107,60 @@
             />
           </div>
           <div class="card-body text-center">
-            <h5 class="card-title mt-5 mb-2 fw-bold">Selamat Ulang Tahun Buat Ayangku tercintahh!</h5>
+            <h5 class="card-title mt-5 mb-2 fw-bold">
+              Selamat Ulang Tahun<br />Fayza Andini Zahra!
+            </h5>
             <p class="card-text">
-              Selamat Ulang Tahun ke-22 ayangkuhhh, semoga panjang umur, dilancarkan rezekinya, makin pinter, makin
-              semangat buat ngejalanin hari-harinya, makin cantik juga tentunya.❤️🥰
-              <p class="card-text">
-                Maaf cuman bisa ngasih kaya gini doang, untuk hadiahnya nyusul dulu ya sayang🥺, maaf kalo saat ini masih
-                belum bisa ngasih apa apa Insyaallah besok aku usahain kamu buat nurutin apa kemauanmu dan nurutin kamu
-                buat capai wishlistmu.
-              </p>
-              <p class="card-text">
-                Pokoknya semangat kuliahnya, lulus tepat waktu terus bahagiain ortu. Makasih udah bertahan sampe sini
-                sama aku ya sayang, aku cuman bisa gini doang buat kamu. Kamu semangat terus ya sayangkuhhh.<br />
-              </p>
-              <p class="card-text">MWAHHHH😚😚</p>
+              Selamat ulang tahun yang ke-22, cintaku! panjang umur, sehat
+              selalu, dilancarkan rezekinya, makin pinter, makin cantik, makin
+              sayang sama aku jugaa. ❤️🥰
             </p>
+            <p class="card-text">
+              Di hari istimewa ini, aku ingin kamu tahu betapa berartinya kamu
+              dalam hidupku. Terima kasih udah selalu ada untukku, udah disayang
+              juga dengan cinta dan kehangatanmu. 🥺❤️
+            </p>
+            <p class="card-text">
+              Maaf kalo aku cuman memberikan ini untuk saat ini. Hadiah yang
+              lebih besar dan istimewa sedang menunggumu, sayang. Aku janji, aku
+              usahakan semampuku untuk mewujudkan semua impian dan keinginanmu.
+              Kamu layak mendapatkan yang terbaik di dunia ini. 🥺🥺
+            </p>
+            <p class="card-text">
+              Semangat untuk semua yang kamu lakukan, terutama dalam kuliahmu.
+              Aku yakin kamu akan lulus dengan gemilang dan membuat orang tuamu
+              bangga. Semangat juga dalam menjalani semuanya, jangan lupa
+              berdoa.
+            </p>
+            <p class="card-text">cium duyuu buat ayang "MWAHHHH😚😚"</p>
+            <p class="card-text fw-bold">Jan lupa liat galerinya beb 😂😂🙏"</p>
             <p class="card-text-custom fw-bold float-end">- Mazda Nawallsyah</p>
           </div>
         </div>
+
+        <!-- Tombol Galeri & Kembali -->
         <div class="d-flex justify-content-center">
-          <button class="btn btn-danger w-25 m-3" id="backToForm" style="display: none">
-            <i class="fas fa-arrow-left me-2"></i>Kembali
-          </button>
-          <button class="btn btn-primary w-25 m-3" id="showGallery" style="display: none">
+          <button
+            class="btn btn-primary w-25 m-3"
+            id="showGallery"
+            style="display: none"
+          >
             <i class="fas fa-images me-2"></i>Lihat Galeri
+          </button>
+          <button
+            class="btn btn-danger w-25 m-3"
+            id="backToForm"
+            style="display: none"
+          >
+            <i class="fas fa-arrow-left me-2"></i>Kembali
           </button>
         </div>
       </div>
     </div>
 
-    <div id="gallery" class="gallery container mt-5">
+    <div id="gallery" class="gallery container-fluid mt-5">
       <h2 class="text-center mb-5 fw-bold">Gallery</h2>
-      <div class="container row justify-content-center">
+      <div class="row justify-content-center">
         <div class="col-md-4 col-sm-6 mb-4">
           <div class="card">
             <img
@@ -131,7 +193,9 @@
               alt="Image 3"
             />
             <div class="card-body">
-              <h5 class="card-title text-center">berangkat ngajar dulu sayangg</h5>
+              <h5 class="card-title text-center">
+                berangkat ngajar dulu sayangg
+              </h5>
             </div>
           </div>
         </div>
@@ -172,19 +236,16 @@
           </div>
         </div>
       </div>
-      <div class="d-flex justify-content-center">
-        <button class="btn btn-warning w-100 mt-5 mb-3" id="backToFormFromGallery">
-          <i class="fas fa-arrow-left me-2"></i>Kembali ke Form
-        </button>
-      </div>
-    </div>    
+    </div>
 
     <!-- Footer -->
     <footer id="footer-bg-img" class="bg-dark text-light py-4">
       <div class="container">
         <div class="row justify-content-center align-items-center mb-3">
           <div class="col-12 text-center mb-2">
-            <p class="mb-0 text-light">Mazda Nawallsyah ❤️ Fayza Andini Zahra</p>
+            <p class="mb-0 text-light">
+              Mazda Nawallsyah ❤️ Fayza Andini Zahra
+            </p>
           </div>
           <div class="col-auto">
             <a
@@ -196,17 +257,29 @@
             </a>
           </div>
           <div class="col-auto">
-            <a href="https://wa.me/6287731930024/" target="_blank" class="text-decoration-none text-light">
+            <a
+              href="https://wa.me/6287731930024/"
+              target="_blank"
+              class="text-decoration-none text-light"
+            >
               <i class="fab fa-whatsapp fa-1x"></i>
             </a>
           </div>
           <div class="col-auto">
-            <a href="https://t.me/mazda2601/" target="_blank" class="text-decoration-none text-light">
+            <a
+              href="https://t.me/mazda2601/"
+              target="_blank"
+              class="text-decoration-none text-light"
+            >
               <i class="fab fa-telegram fa-1x"></i>
             </a>
           </div>
           <div class="col-auto">
-            <a href="https://www.github.com/mazdanwllsyh/" target="_blank" class="text-decoration-none text-light">
+            <a
+              href="https://www.github.com/mazdanwllsyh/"
+              target="_blank"
+              class="text-decoration-none text-light"
+            >
               <i class="fab fa-github fa-1x"></i>
             </a>
           </div>
@@ -263,20 +336,27 @@
         $("#submitBtn").on("click", function () {
           var name = $("#name").val().trim().toLowerCase(); // Konversi input nama menjadi huruf kecil
           var birthday = $("#birthday").val().trim(); // Tanpa perlu konversi, karena input type=date sudah sesuai format
+          var sayang = $("#sayang").val(); // Get selected option value
 
           console.log("Name: " + name);
           console.log("Birthday: " + birthday);
 
-          if (validNames.includes(name) && validDates.includes(birthday)) {
+          if (
+            validNames.includes(name) &&
+            validDates.includes(birthday) &&
+            sayang === "sayang"
+          ) {
             $("#submitBtn").text("Teleport"); // Ubah teks tombol menjadi "Teleport"
             $("#birthdayForm").hide();
             $("#card").hide();
             $("#greetingCard").show();
             $("#backToForm").show(); // Tampilkan tombol "Kembali ke pelukanku"
             $("#showGallery").show(); // Tampilkan tombol "Lihat Galeri"
+            alert("Sayang Ichaa Jugaa ❤️🥰"); // Show alert
+            startTypingAnimation(); // Start the typing animation
           } else {
             alert("Eits itu namanya kesalahan sayangku 😚❤️");
-            $("#submitBtn").text("Coba Lagi"); // Ubah teks tombol menjadi "Coba Lagi"
+            $("#submitBtn").text("Kirim Lagi"); // Ubah teks tombol menjadi "Kirim Lagi"
             $("#birthdayForm")[0].reset();
           }
         });
@@ -286,15 +366,15 @@
         });
 
         $("#showGallery").on("click", function () {
-        if ($("#gallery").is(":visible")) {
-        $("#gallery").hide();
-        $(this).text("Lihat Galeri");
+          if ($("#gallery").is(":visible")) {
+            $("#gallery").hide();
+            $(this).text("Lihat Galeri");
           } else {
-        $("#form").hide();
-        $("#gallery").show();
-        $(this).text("Tutup Galeri");
-        }
-      });
+            $("#form").hide();
+            $("#gallery").show();
+            $(this).text("Tutup Galeri");
+          }
+        });
 
         $("#backToFormFromGallery").on("click", function () {
           location.reload(); // Refresh halaman untuk kembali ke form
@@ -337,7 +417,34 @@
         }
 
         changeBackground(); // Ganti background pertama kali
-        setInterval(changeBackground, 2200); // Setiap 2 detik, ganti background
+        setInterval(changeBackground, 2250); // Setiap 2 detik, ganti background
+
+        // Function to start typing animation for <p> elements
+        function startTypingAnimation() {
+          var paragraphs = $("#greetingCard .card-text");
+          var typingSpeed = 20; // Speed of typing in milliseconds
+
+          paragraphs.each(function (index, element) {
+            var text = $(element).text();
+            $(element).text(""); // Clear the text for typing effect
+            setTimeout(function () {
+              typeText(element, text, typingSpeed);
+            }, index * 5050); // Delay each paragraph typing animation
+          });
+        }
+
+        // Function to type text character by character
+        function typeText(element, text, speed) {
+          var i = 0;
+          function type() {
+            if (i < text.length) {
+              $(element).append(text.charAt(i));
+              i++;
+              setTimeout(type, speed);
+            }
+          }
+          type();
+        }
       });
     </script>
   </body>

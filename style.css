@@ -53,7 +53,7 @@ body {
 }
 
 #greetingCard {
-  max-height: 100vh; /* Sesuaikan dengan ketinggian footer dan header */
+  min-height: 100vh; /* Sesuaikan dengan ketinggian footer dan header */
   background-color: rgba(0, 220, 125, 0.778);
   backdrop-filter: blur(30px);
   position: relative;
@@ -61,6 +61,7 @@ body {
 
 .card {
   position: relative;
+  margin: 0 auto;
 }
 
 .image-wrapper {
@@ -112,7 +113,7 @@ body {
   object-fit: cover;
   border: 3px solid black;
   border-radius: 50%;
-  margin: 0 auto 10px;
+  margin: 0 auto;
 }
 .card-title {
   font-family: "Inter Tight", sans-serif;
@@ -157,7 +158,7 @@ body {
 /* Tambahkan ini di file style.css */
 .gallery .card-img-top {
   width: 100%;
-  height: 200px;
+  height: 325px;
   object-fit: cover;
 }
 
@@ -165,6 +166,7 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
   padding: 10px 15px;
   transition: transform 0.3s;
+  margin: 0 auto;
 }
 
 .gallery .card:hover {
@@ -208,8 +210,8 @@ body {
   body {
     scroll-behavior: smooth;
     transition: background-image 1s ease-in-out;
-    background-size: contain;
-    backdrop-filter: blur(5px);
+    background-size: cover;
+    backdrop-filter: blur(3px);
   }
 
   .card {
@@ -217,6 +219,7 @@ body {
   }
 
   #greetingCard {
+    min-height: 100vh;
     background-color: rgba(97, 223, 229, 0.901);
     backdrop-filter: blur(30px);
     position: relative;
