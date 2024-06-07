@@ -54,6 +54,7 @@ body {
 
 #greetingCard {
   min-height: 100vh; /* Sesuaikan dengan ketinggian footer dan header */
+  max-width: 700px;
   background-color: rgba(0, 220, 125, 0.778);
   backdrop-filter: blur(30px);
   position: relative;
@@ -212,19 +213,20 @@ body {
 @media (max-width: 991px) {
   body {
     scroll-behavior: smooth;
-    transition: background-image 1s ease-in-out;
+    transition: background-image 750ms ease-in-out;
     background-size: cover;
     backdrop-filter: blur(3px);
   }
 
   .card {
-    backdrop-filter: blur(50px);
+    backdrop-filter: blur(60px);
+    background-color: rgba(106, 234, 178, 0.820);
   }
 
   #greetingCard {
     min-height: 100vh;
-    background-color: rgba(97, 223, 229, 0.901);
-    backdrop-filter: blur(30px);
+    background-color: rgba(158, 217, 225, 0.820);
+    backdrop-filter: blur(50px);
     position: relative;
   }
 }
@@ -247,6 +249,7 @@ footer {
   color: #fff5f4;
   bottom: 0;
   padding: 20px 0; /* Tambahkan padding atas dan bawah pada footer */
+  cursor: pointer;
 }
 
 .social-icons a {
