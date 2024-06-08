@@ -71,7 +71,9 @@
                 class="form-select text-center"
                 required
               >
-                <option value="" disabled selected>Sayang atau Ga Hayoo 🤔🤔</option>
+                <option value="" disabled selected>
+                  Sayang atau Ga Hayoo 🤔🤔
+                </option>
                 <option value="enggak">Enggak</option>
                 <option value="b aja">B aja</option>
                 <option value="sayang">Sayang lah</option>
@@ -404,16 +406,30 @@
 
         // Fungsi untuk mengganti background setiap detik
         var backgrounds = [
-          "url('https://source.unsplash.com/random/1920x1080?nature,water')",
-          "url('https://source.unsplash.com/random/1920x1080?nature,forest')",
-          "url('https://source.unsplash.com/random/1920x1080?nature,mountain')",
-          "url('https://source.unsplash.com/random/1920x1080?nature,beach')",
-          "url('https://source.unsplash.com/random/1920x1080?nature,desert')",
+          "https://source.unsplash.com/random/1920x1080/?animal",
+          "https://source.unsplash.com/random/1920x1080/?nature",
+          "https://source.unsplash.com/random/1920x1080/?forest",
+          "https://source.unsplash.com/random/1920x1080/?mountain",
+          "https://source.unsplash.com/random/1920x1080/?beach",
+          "https://source.unsplash.com/random/1920x1080/?desert",
         ];
 
         function changeBackground() {
           var index = Math.floor(Math.random() * backgrounds.length);
-          $("body").css("background-image", backgrounds[index]);
+          var backgroundUrl =
+            backgrounds[index] + "&timestamp=" + new Date().getTime();
+          console.log("Changing background to: " + backgroundUrl);
+
+          $("<img>")
+            .attr("src", backgroundUrl)
+            .on("load", function () {
+              $("body").css("background-image", "url('" + backgroundUrl + "')");
+            })
+            .on("error", function () {
+              console.error(
+                "Gagal mendapati gambar: " + backgroundUrl
+              );
+            });
         }
 
         changeBackground(); // Ganti background pertama kali

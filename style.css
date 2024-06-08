@@ -6,6 +6,7 @@ body {
   transition: background-image 450ms ease-in-out;
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
 }
 
 /* CSS untuk header */
@@ -220,7 +221,7 @@ body {
 
   .card {
     backdrop-filter: blur(60px);
-    background-color: rgba(106, 234, 178, 0.820);
+    background-color: rgba(89, 220, 216, 0.82);
   }
 
   #greetingCard {
