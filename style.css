@@ -55,7 +55,7 @@ body {
 
 #greetingCard {
   min-height: 100vh; /* Sesuaikan dengan ketinggian footer dan header */
-  max-width: 700px;
+  max-width: 850px;
   background-color: rgba(0, 220, 125, 0.778);
   backdrop-filter: blur(30px);
   position: relative;
