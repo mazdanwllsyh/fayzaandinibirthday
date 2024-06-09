@@ -402,23 +402,24 @@
         }
 
         updateTime(); // Pertama kali, tampilkan waktu saat ini
-        setInterval(updateTime, 750); // Setiap 1 detik, perbarui waktu
+        setInterval(updateTime, 550); // Setiap 0,5 detik, perbarui waktu
 
         // Fungsi untuk mengganti background setiap detik
         var backgrounds = [
-          "https://source.unsplash.com/random/1920x1080/?animal",
-          "https://source.unsplash.com/random/1920x1080/?nature",
-          "https://source.unsplash.com/random/1920x1080/?forest",
-          "https://source.unsplash.com/random/1920x1080/?mountain",
-          "https://source.unsplash.com/random/1920x1080/?beach",
-          "https://source.unsplash.com/random/1920x1080/?desert",
+          "https://loremflickr.com/1920/1080/cats",
+          "https://picsum.photos/1920/1080?random=1",
+          "https://loremflickr.com/1920/1080/sea",
+          "https://picsum.photos/1920/1080?random=2",
+          "https://loremflickr.com/1920/1080/nature",
+          "https://picsum.photos/1920/1080?random=3",
+          "https://loremflickr.com/1920/1080/animals"
         ];
 
         function changeBackground() {
           var index = Math.floor(Math.random() * backgrounds.length);
           var backgroundUrl =
             backgrounds[index] + "&timestamp=" + new Date().getTime();
-          console.log("Changing background to: " + backgroundUrl);
+          console.log("Ubah Gambar ke: " + backgroundUrl);
 
           $("<img>")
             .attr("src", backgroundUrl)
@@ -426,14 +427,12 @@
               $("body").css("background-image", "url('" + backgroundUrl + "')");
             })
             .on("error", function () {
-              console.error(
-                "Gagal mendapati gambar: " + backgroundUrl
-              );
+              console.error("Gagal mendapati gambar: " + backgroundUrl);
             });
         }
 
         changeBackground(); // Ganti background pertama kali
-        setInterval(changeBackground, 2050); // Setiap 2 detik, ganti background
+        setInterval(changeBackground, 2250); // Setiap 2 detik, ganti background
 
         // Function to start typing animation for <p> elements
         function startTypingAnimation() {
