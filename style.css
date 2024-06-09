@@ -219,9 +219,9 @@ body {
     backdrop-filter: blur(3px);
   }
 
-  .card {
+  #form-card {
     backdrop-filter: blur(60px);
-    background-color: rgba(89, 220, 216, 0.82);
+    background-color: rgba(44, 221, 185, 0.856);
   }
 
   #greetingCard {
@@ -234,16 +234,17 @@ body {
 
 /* Footer */
 #footer-bg-img {
-  background-image: url("#"); /* Ganti dengan URL gambar latar belakang footer Anda */
+  background-image: url("#");
   background-repeat: no-repeat;
   width: 100%;
-  background-size: cover;
+  background-size: contain;
 }
 
 footer {
   position: relative;
   width: 100%;
   background-color: #414141;
+  backdrop-filter: blur(60px);
   font-family: "Inter Tight", sans-serif;
   font-weight: bold;
   text-align: center;

@@ -34,7 +34,7 @@
 
     <div id="form" class="d-flex align-items-center justify-content-center">
       <div class="container mt-5">
-        <div id="card" class="card card-center p-4">
+        <div id="form-card" class="card card-center p-4">
           <form id="birthdayForm">
             <h1 class="text-center mb-3 highlight-text fw-bold">
               This is your day
@@ -72,7 +72,7 @@
                 required
               >
                 <option value="" disabled selected>
-                  Sayang atau Ga Hayoo 🤔🤔
+                  sayang ga sih? 🤔🤔
                 </option>
                 <option value="enggak">Enggak</option>
                 <option value="b aja">B aja</option>
@@ -149,7 +149,7 @@
             </p>
             <p class="card-text">
               Di hari istimewa ini, aku ingin berterima kasih buat kamu dan.
-              Terima kasih udah selalu ada untukku, udah disayang juga dengan
+              Terima kasih udah selalu ada buat aku, udah disayang juga dengan
               cinta dan kehangatanmu. 🥺❤️
             </p>
             <p class="card-text">
@@ -161,13 +161,13 @@
             <p class="card-text">
               Semangat untuk semua yang kamu lakuin, fokus dalam kuliahmu. Aku
               yakin kamu akan lulus dengan gemilang dan membuat orang tuamu
-              bangga, Aamiin. Semangat terus pokoknya.
+              bangga, Aamiin. Semangat terus pokoknya. 🤗🤗
             </p>
             <p class="card-text">
               sekali lagi aku minta maaf ya sayang kalo kadang aku juga
               ngeselin, nyebelin bikin kamu marah. maaf kalo aku kurang peka
               orangnya, maaf kalo aku orangnya monoton. ya aku cuman bisa kaya
-              gini beb 🥺🥺
+              gini beb. 🥺🥺
             </p>
             <p class="card-text">
               aku cuman bisa ngomong segini doang itupun lewat kode yang aku
@@ -175,9 +175,18 @@
               baik. dengan web sederhana yang aku buat aku harap kamu seneng
               bisa ngebaca ini
             </p>
+            <p class="card-text">
+              and the last one. jangan insecure terus, kamu tu cakep jangan
+              banding-bandingin diri kamu sama yang lain. kamu tu dah cakep
+              bagiku, kalo masalah fisik tu gampang, kamu kalo mau nambahin bb
+              ya banyakin maem, kalo mau badanmu fit olahraga, jangan terus
+              insecure sayangkuuu. 😚😚
+            </p>
             <p class="card-text">SAYANG ICHAA "MWAHHHH😚😚"</p>
             <p class="card-text fw-bold">Jan lupa liat galerinya sayang 😂😂</p>
-            <p class="card-text-custom text-lg-end fw-bold float-end">- Mazda Nawallsyah</p>
+            <p class="card-text-custom text-lg-end fw-bold float-end">
+              - Mazda Nawallsyah
+            </p>
           </div>
         </div>
 
@@ -359,7 +368,7 @@
           "cantiknya mazda",
         ].map((name) => name.toLowerCase()); // Konversi semua nama valid menjadi huruf kecil
 
-        var validDates = ["2002-06-13", "2024-06-13"];
+        var validDates = ["2002-06-13", "2024-06-13", "0000-06-13"];
 
         $("#submitBtn").on("mouseenter", function () {
           var name = $("#name").val().trim().toLowerCase(); // Konversi input nama menjadi huruf kecil
@@ -392,7 +401,7 @@
           ) {
             $("#submitBtn").text("Teleport"); // Ubah teks tombol menjadi "Teleport"
             $("#birthdayForm").hide();
-            $("#card").hide();
+            $("#form-card").hide();
             $("#greetingCard").show();
             $("#backToForm").show(); // Tampilkan tombol "Kembali ke pelukanku"
             $("#showGallery").show(); // Tampilkan tombol "Lihat Galeri"
@@ -456,13 +465,14 @@
 
         // Fungsi untuk mengganti background setiap detik
         var backgrounds = [
+          "https://loremflickr.com/1920/1080/space",
           "https://loremflickr.com/1920/1080/cats",
           "https://picsum.photos/1920/1080?random=1",
           "https://loremflickr.com/1920/1080/sea",
           "https://picsum.photos/1920/1080?random=2",
           "https://loremflickr.com/1920/1080/nature",
           "https://picsum.photos/1920/1080?random=3",
-          "https://loremflickr.com/1920/1080/animals",
+          "https://picsum.photos/1920/1080/"
         ];
 
         function changeBackground() {
@@ -487,14 +497,14 @@
         // Function to start typing animation for <p> elements
         function startTypingAnimation() {
           var paragraphs = $("#greetingCard .card-text");
-          var typingSpeed = 12; // Speed of typing in milliseconds
+          var typingSpeed = 10; // Speed of typing in milliseconds
 
           paragraphs.each(function (index, element) {
             var text = $(element).text();
             $(element).text(""); // Clear the text for typing effect
             setTimeout(function () {
               typeText(element, text, typingSpeed);
-            }, index * 5450); // Delay each paragraph typing animation
+            }, index * 5650); // Delay each paragraph typing animation
           });
         }
 
