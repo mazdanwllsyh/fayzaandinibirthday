@@ -78,10 +78,40 @@
                 <option value="b aja">B aja</option>
                 <option value="sayang">Sayang lah</option>
               </select>
-              <div class="tooltip-label text-dark fw-bold">
+              <div class="tooltip-label text-dark fw-bold" style="opacity: 0.5">
                 *jawab yang bener beb
               </div>
             </div>
+
+            <!-- Card untuk jawaban salah -->
+            <div
+              id="wrongCard"
+              class="card text-white bg-danger mt-3"
+              style="display: none"
+            >
+              <div class="card-body">
+                <h5 class="card-title text-lg-center fw-bold">
+                  Kesalahan Besar!
+                </h5>
+                <p class="card-text text-center fw-bold">
+                  oh ichaa ga sayang sama aku 😤😡
+                </p>
+              </div>
+            </div>
+            <!-- Card untuk jawaban kurang tepat -->
+            <div
+              id="tryAgainCard"
+              class="card text-white bg-dark mt-3"
+              style="display: none"
+            >
+              <div class="card-body">
+                <h5 class="card-title text-center fw-bold">Coba Lagi!</h5>
+                <p class="card-text text-lg-center fw-bold">
+                  itu namanya kesalahan sayangku 😚❤️
+                </p>
+              </div>
+            </div>
+
             <div class="d-flex justify-content-center">
               <button
                 type="button"
@@ -354,10 +384,18 @@
             $("#greetingCard").show();
             $("#backToForm").show(); // Tampilkan tombol "Kembali ke pelukanku"
             $("#showGallery").show(); // Tampilkan tombol "Lihat Galeri"
-            alert("Sayang Ichaa Jugaa ❤️🥰"); // Show alert
+            alert("Sayang Ichaa Jugaa ❤️🥰"); // Tampilkan alert untuk jawaban benar
             startTypingAnimation(); // Start the typing animation
+          } else if (sayang === "enggak" || sayang === "b aja") {
+            $("#wrongCard").show(); // Tampilkan card salah
+            setTimeout(function () {
+              $("#wrongCard").hide();
+            }, 2200); // Sembunyikan card setelah 2,2 detik
           } else {
-            alert("Jawabnya yang bener ya sayangku 😚❤️");
+            $("#tryAgainCard").show(); // Tampilkan card kurang tepat
+            setTimeout(function () {
+              $("#tryAgainCard").hide();
+            }, 2200); // Sembunyikan card setelah 2,2 detik
             $("#submitBtn").text("Kirim Lagi"); // Ubah teks tombol menjadi "Kirim Lagi"
             $("#birthdayForm")[0].reset();
           }
@@ -412,7 +450,7 @@
           "https://picsum.photos/1920/1080?random=2",
           "https://loremflickr.com/1920/1080/nature",
           "https://picsum.photos/1920/1080?random=3",
-          "https://loremflickr.com/1920/1080/animals"
+          "https://loremflickr.com/1920/1080/animals",
         ];
 
         function changeBackground() {
